@@ -1,0 +1,4 @@
+Category,MinPop,MaxPop,Efficient,ModeratelyEfficient
+Small,0,99999,110,140
+Medium,100000,499999,120,150
+Large,500000,999999999999999,130,160

@@ -1,0 +1,35 @@
+def compare_with_previous(current_cities, previous_dict):
+    if not previous_dict:
+        return
+    while True:
+        choice = input("\nWould you like to compare to previous results? (y/n) ")
+
+        if choice.lower() == 'y':
+            print("\n" + "="*60)
+            print("Previous Results:")
+            print("="*60)
+            for previous_city, data in previous_dict.items():
+                print(f" {previous_city.upper()}: {data['gpcd']:.1f} GPCD ({data['status']}")
+            print("="*60)
+
+            print("\n compare to current city/(ies)")
+            for city in current_cities:
+                if city.name in previous_dict:
+                    old_gpcd = previous_dict[city.name]["gpcd"]
+                    current_gpcd = city.average_gpcd()
+                    diff = current_gpcd - old_gpcd
+
+                    if diff >0:
+                        print(f" {city.name.upper()}: Increased by {diff:.1f} GPCD Increased")
+                    elif diff <0:
+                        print(f" {city.name.upper()}: Decreased by abs{(diff):.1f} GPCD Decreased")
+                    else:
+                        print(f" {city.name.upper()}: No change")
+                else:
+                    print(f" {city.name.upper()}: No Previous Data")
+            break
+
+        elif choice in ['n']:
+            break
+        else:
+            print(" 'y' or 'n'")

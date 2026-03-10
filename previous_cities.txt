@@ -1,0 +1,4 @@
+Bakersfield,100,5000000.0
+New York City,8478072,1000000000.0
+San Luis Obispo,47000,4195890.0
+Los Angeles,4000000,400000000.0

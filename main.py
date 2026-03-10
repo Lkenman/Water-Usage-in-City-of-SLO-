@@ -1,4 +1,9 @@
-from operator import truediv
+#Luca Kenman and Victor Carreno
+#CSC 101 - Final Coding Project
+#The work and code was done equally between the two of us
+#The purpose of our code is to determine if a city is water efficient based on
+#It's population, size, and daily water usage
+
 
 from class_city import City
 
@@ -66,7 +71,7 @@ def sorted_results(city_list, benchmarks):
         output = f"{rank}. {city.name.upper()} ({city.size_city()} City) - {gpcd:.1f} GPCD, Rating: {status}"
 
         if is_high_risk:
-            output += "This city is at high risk due to water waste"
+            output += ": This city is at high risk due to water waste"
         print (output)
     print("="*60)
 
